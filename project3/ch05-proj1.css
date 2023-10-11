@@ -1,0 +1,93 @@
+/* general text formatting */
+
+
+body {
+   font-family: "Roboto", Verdana, Arial, sans-serif;
+   font-size: 100%;
+ background-color: #ECEFF1;    
+}
+
+section {
+   background-color: white;
+   margin: 1em 4em 1em 4em;
+   border: solid 1pt black;
+
+}
+section h3 {
+  color: white;
+  padding: 0.75rem;
+  background-color: #263238; 
+}
+
+.status {
+    border-radius: 0.25rem;
+    padding: 3px;
+    color: white;
+    
+}
+.status-processing {
+    background-color:    #E65100;    
+}
+.status-shipped {
+    background-color:   #4CAF50;    
+}
+.status-pending {
+    background-color:    #03A9F4;    
+}
+
+
+
+/* table formatting -- you will add these */
+
+th{
+    font-weight: bold;
+    color: #555;
+    text-align: left;
+    padding-left: 55px;    
+}
+
+
+table{
+    width: 100%;
+}
+
+caption{
+    color: white;
+    font-size: large;
+    padding: 10px;
+    text-align: center;
+    background-color: #607d8b;
+    margin: 10px 45px 10px 45px;
+}
+
+td{
+    padding: 15px 0px 15px 55px;
+}
+
+fieldset{
+    margin: 10px 40px 10px 40px;
+}
+legend{
+    background-color: #607d8b;
+    font-size: large;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    width: 90%;
+}
+
+label{
+    font-weight: bold;
+    margin: 10px 0px 10px 0px;
+    text-align: left;
+}
+
+form{
+    padding: 10px;
+}
+
+input,select{
+    margin-bottom: 15px;
+    font-family: "Roboto", Verdana, Arial, sans-serif;
+}
+
