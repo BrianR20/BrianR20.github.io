@@ -1,0 +1,161 @@
+Open sidebar
+ChatGPT 3.5
+
+User
+how do i add a marker to this map   <!DOCTYPE html>
+  <html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <title>Pickleball Court Locator</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/favicon.jpg"> 
+  </head>
+  <link href="styles.css" rel="stylesheet">
+
+<body>
+  <center> <iframe
+    width="600"
+    height="450"
+    frameborder="0"
+    style="border:0"
+    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCcGGPLsrkYUbt1C5F69sSAPvsRrn2xE2k&q=Scranton+PA"
+    allowfullscreen>
+  </iframe>
+</center>
+</body>
+
+</html>
+
+ChatGPT
+To add a marker to your Google Map, you can use the Google Maps JavaScript API. First, you need to obtain an API key from the Google Cloud Platform Console. Once you have the API key, you can modify your HTML code to include the necessary JavaScript code to add a marker.
+
+Here's an example of how you can modify your HTML code:
+
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Pickleball Court Locator</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/favicon.jpg">
+  <style>
+    /* Add your styles here if needed */
+  </style>
+</head>
+
+<body>
+  <center>
+    <div id="map" style="width: 600px; height: 450px;"></div>
+
+    <script>
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 41.408969, lng: -75.662412}, // Coordinates for Scranton, PA
+          zoom: 14
+        });
+
+        // Add a marker
+        var marker = new google.maps.Marker({
+          position: {lat: 41.408969, lng: -75.662412},
+          map: map,
+          title: 'Pickleball Court'
+        });
+      }
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+  </center>
+</body>
+</html>
+Make sure to replace "YOUR_API_KEY" with the actual API key you obtained. This example initializes a Google Map centered on Scranton, PA, and adds a marker at the specified coordinates. Adjust the coordinates and other options as needed for your specific use case.
+
+
+
+
+User
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <title>Pickleball Court Locator</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/favicon.jpg"> 
+  </head>
+  <link href="styles.css" rel="stylesheet">
+
+<body>
+  <center> <iframe
+    width="600"
+    height="450"
+    frameborder="0"
+    style="border:0"
+    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCcGGPLsrkYUbt1C5F69sSAPvsRrn2xE2k&q=Scranton+PA"
+    allowfullscreen>
+
+    <script>
+      var marker = new google.maps.Marker({
+        position: { lat: 71.408969, lng: -75.662412},
+        map:map,
+        title: 'Pickleball Court'
+      });
+    
+    </script>
+  </iframe>
+</center>
+</body>
+
+</html> add it to this html file
+
+ChatGPT
+Sure, you can add a marker to the map embedded in the iframe by using the Google Maps JavaScript API. However, keep in mind that the embedded map in the iframe may not be directly accessible for manipulation due to security reasons. In this case, you might need to create a separate HTML file or use an existing map container to add the marker.
+
+Here's an example of how you can modify your HTML code to include the Google Maps JavaScript API:
+
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Pickleball Court Locator</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/favicon.jpg"> 
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+</head>
+<link href="styles.css" rel="stylesheet">
+
+<body>
+  <center>
+    <div id="map" style="width: 600px; height: 450px;"></div>
+
+    <script>
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 41.408969, lng: -75.662412}, // Coordinates for Scranton, PA
+          zoom: 14
+        });
+
+        // Add a marker
+        var marker = new google.maps.Marker({
+          position: {lat: 41.408969, lng: -75.662412},
+          map: map,
+          title: 'Pickleball Court'
+        });
+      }
+    </script>
+  </center>
+</body>
+</html>
+Replace "YOUR_API_KEY" with your actual Google Maps API key. This example initializes a Google Map with a marker at the specified coordinates. Adjust the coordinates and other options as needed for your specific use case.
+
+
+
+
+
+
+Message ChatGPT…
+
+ChatGPT can make mistakes. Consider checking important information.
+ChatGPT
